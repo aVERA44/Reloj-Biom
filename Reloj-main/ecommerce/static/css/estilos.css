@@ -1,0 +1,76 @@
+body{
+    background-color: azure;
+
+}
+.form_cliente{
+    width: 25%;
+    margin: 0 auto;
+}
+#container-clock {
+    text-align: center;
+}
+  
+#container-clock h1 {
+    font-size: 5rem;
+    font-weight: 400;
+}
+  
+#container-clock p {
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  
+#TituloLista {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 200;
+}
+  
+#DatosLista {
+    background-color: #f8f9fa;
+    /* font-size: 20px; */
+    /* text-align: center; */
+}
+  
+.ListaSombra {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-style: solid;
+    border-width: 2px;
+}
+#Dato {
+    /* border-style: solid;
+    border-width: 1px; */
+}
+.Reloj {
+    margin-top: 30px;
+}
+.Lista {
+    margin-top: 30px;
+}
+  
+  /* INGRESAR HTML */
+  
+.Ingreso {
+    background-color: #f8f9fa;
+    width: 400px;
+    display: flex;
+    margin: auto;
+    border-radius: 30px;
+}
+  
+.TituloIngreso {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+  
+.Usuario,
+.Contraseña {
+    text-align: left;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+}
+  
+#Formulario {
+    margin-bottom: 10px;
+}

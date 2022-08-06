@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Relojs Biometrico</title>
+  </head>
+  <style>
+    #container-clock {
+        text-align: center;
+    }
+    
+    #container-clock h1 {
+        font-size: 5rem;
+        font-weight: 400;
+    }
+    
+    #container-clock p {
+        font-size: 2.5rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    #TituloLista {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 200;
+    }
+    
+    #DatosLista {
+        background-color: #f8f9fa;
+        /* font-size: 20px; */
+        /* text-align: center; */
+    }
+    
+    .ListaSombra {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-style: solid;
+        border-width: 2px;
+    }
+    #Dato {
+        /* border-style: solid;
+        border-width: 1px; */
+    }
+    .Reloj {
+        margin-top: 30px;
+    }
+    .Lista {
+        margin-top: 30px;
+    }
+    
+    /* INGRESAR HTML */
+    
+    .Ingreso {
+        background-color: #f8f9fa;
+        width: 400px;
+        display: flex;
+        margin: auto;
+        border-radius: 30px;
+    }
+    
+    .TituloIngreso {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    
+    .Usuario,
+    .Contraseña {
+        text-align: left;
+        margin-top: 10px;
+        /* margin-left: 10px; */
+    }
+    
+    #Formulario {
+        margin-bottom: 10px;
+    }
+    @media (max-width: 30em) {
+        table{
+          width: 100%;
+        }
+        table tr{
+          display:flex;
+          flex-direction: column;
+          padding: 1em;
+          margin-top: 1em;
+        }
+    }
+</style>
+  <body>
+  <form action="/tarjeta/">
+                    {% comment %} <a href="{ % url 'ingresar' % }" class="btn btn-primary btn-flat btnTest">
+                     Registrar
+                </a> {% endcomment %}
+                <button id="stat-btn " class="btn bg-secondary">Regresar</button>
+                </form>
+
+    
+    <section class="Reloj">
+      <div class="container">
+        <div class="row">
+          <div class="col" id="container-clock">
+            <h1 id="time">00:00:00</h1>
+            <p id="date">date</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Lista">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="col"></div>
+            <div class="col" id="TituloLista">Registro</div>
+            <div class="col"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+              <div class="col">
+              <div class="table-responsive">
+                <table class="table table-dark table-bordered table-strip">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">C.I</th>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">hora de entrada</th>
+                    
+                      <th scope="col">hora de lunch</th>
+                      <th scope="col">hora de terminar el lunch</th>
+                      <th scope="col">hora de SALIDA</th>
+                      <th scope="col">horario</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>099999999</td>
+                      <td>03/08/2021</td>
+                      <td>Otto</td>
+                      <td>santos</td>
+                      <td>07:30 Am</td>
+                      
+                      <td>12:30 Pm</td>
+                      <td>13:30 Pm</td>
+                      <td>15:30 Pm</td>
+                      <td>Matutino</td>
+                      
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      
+                      <td>099999999</td>
+                      <td>03/08/2021</td>
+                      <td>Otto</td>
+                      <td>santos</td>
+                      <td>07:30 Am</td>
+                      
+                      <td>12:30 Pm</td>
+                      <td>13:30 Pm</td>
+                      <td>15:30 Pm</td>
+                      <td>Matutino</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      
+                      <td>099999999</td>
+                      <td>03/08/2021</td>
+                      <td>Otto</td>
+                      <td>santos</td>
+                      <td>18:30 Pm</td>
+                      
+                      <td>12:00 Am</td>
+                      <td>13:00 Am</td>
+                      <td>06:30 Am</td>
+                      <td>Nocturno</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+      
+    <script
+      <script>
+        const time = document.getElementById("time");
+const date = document.getElementById("date");
+
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+const interval = setInterval(() => {
+  const local = new Date();
+
+  let day = local.getDate(),
+    month = local.getMonth(),
+    year = local.getFullYear();
+
+  time.innerHTML = local.toLocaleTimeString();
+  date.innerHTML = `${day} ${monthNames[month]} ${year}`;
+}, 1000);
+    </script>
+    ></script>
+  </body>
+</html>
+{% endblock %}

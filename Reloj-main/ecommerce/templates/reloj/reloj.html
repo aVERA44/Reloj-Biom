@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+</head>
+<style>
+    #container-clock {
+        text-align: center;
+    }
+    
+    #container-clock h1 {
+        font-size: 5rem;
+        font-weight: 400;
+    }
+    
+    #container-clock p {
+        font-size: 2.5rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    #TituloLista {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 200;
+    }
+    
+    #DatosLista {
+        background-color: #f8f9fa;
+        /* font-size: 20px; */
+        /* text-align: center; */
+    }
+    
+    .ListaSombra {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-style: solid;
+        border-width: 2px;
+    }
+    #Dato {
+        /* border-style: solid;
+        border-width: 1px; */
+    }
+    .Reloj {
+        margin-top: 30px;
+    }
+    .Lista {
+        margin-top: 30px;
+    }
+    
+    /* INGRESAR HTML */
+    
+    .Ingreso {
+        background-color: #f8f9fa;
+        width: 400px;
+        display: flex;
+        margin: auto;
+        border-radius: 30px;
+    }
+    
+    .TituloIngreso {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    
+    .Usuario,
+    .Contraseña {
+        text-align: left;
+        margin-top: 10px;
+        /* margin-left: 10px; */
+    }
+    
+    #Formulario {
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <section class="NavbarBio">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        {% comment %} <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+              <button class="btn btn-outline-success" type="submit">
+                Regresar
+              </button>
+            </form>
+          </div>
+        </div> {% endcomment %}
+      </nav>
+    </section>
+    <section class="Reloj">
+      <div class="container">
+        <div class="row">
+          <div class="col" id="container-clock">
+            <h1 id="time">00:00:00</h1>
+            <p id="date">date</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Ingreso">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5 class="TituloIngreso">Iniciar Sesion</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h6 class="TituloIngreso">Ingrese sus datos de forma correcta</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h5 class="Usuario">Usuario</h5>
+                    <input class="form-control me-2" type="search" placeholder="Usuario" aria-label="Search" id="Formulario">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h5 class="Contraseña">Contraseña</h5>
+                    <input class="form-control me-2" type="search" placeholder="Contraseña" aria-label="Search" id="Formulario">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col">
+                <form action="/tarjeta/">
+                    
+                <button id="stat-btn " class="btn bg-secondary">ingresar</button>
+                </form>    
+                </div>
+                <div class="col">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function myFunction() {
+        alert("Registro de asistencia satisfactorio");
+        }
+    </script>
+
+<script
+      <script>
+        const time = document.getElementById("time");
+const date = document.getElementById("date");
+
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+const interval = setInterval(() => {
+  const local = new Date();
+
+  let day = local.getDate(),
+    month = local.getMonth(),
+    year = local.getFullYear();
+
+  time.innerHTML = local.toLocaleTimeString();
+  date.innerHTML = `${day} ${monthNames[month]} ${year}`;
+}, 1000);
+    </script>
+></script>
+</body>
+</html>
+
+{% endblock %}
